@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waxpad — Floating Markdown Notepad for macOS</title>
-  <meta name="description" content="A floating markdown notepad that hovers over everything. Plain .md files your AI agent can read.">
+  <meta name="description" content="A floating markdown notepad that lives on top of everything. Plain .md files your AI agent can read. Free, open source, 4 MB.">
+  <meta property="og:title" content="Waxpad — Floating Markdown Notepad for macOS">
+  <meta property="og:description" content="Like Raycast Notes, but your notes are just .md files. One hotkey. Always on top. Your AI reads them natively.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -12,94 +15,166 @@
 </head>
 <body>
 
-  <!-- Hero -->
-  <section class="hero fade-in">
-    <h1>Your floating scratchpad.</h1>
-    <p class="subtitle">A markdown notepad that hovers over everything.<br>One keystroke to summon. Plain <code>.md</code> files your AI can read.</p>
-    <div class="buttons">
-      <a href="https://github.com/mchlkucera/waxpad/releases" class="btn btn-primary">Download for macOS</a>
-      <a href="https://github.com/mchlkucera/waxpad" class="btn btn-secondary">View on GitHub</a>
-    </div>
-    <p class="meta">Free &middot; Open source &middot; 4 MB &middot; macOS 13+</p>
-  </section>
+  <div class="layout">
 
-  <!-- Floating Window Mockup -->
-  <section class="mockup-section fade-in">
-    <div class="mockup-wrap" id="mockup-wrap">
-      <div class="mockup-glow"></div>
-      <div class="mockup" id="mockup">
-        <div class="mockup-titlebar">
-          <div class="mockup-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
+    <!-- Left column: all text content -->
+    <div class="content-col">
+
+      <!-- Hero -->
+      <section class="hero fade-in">
+        <p class="hero-eyebrow">macOS native &middot; open source &middot; ~4 MB</p>
+        <h1>Your floating<br><code>.md</code> file.</h1>
+        <p class="subtitle">Basically, a slightly shittier <a href="https://www.raycast.com/core-extensions/floating-notes" target="_blank">Raycast Notes</a> &mdash; but your files live on disk, so your AI agents can read and write them. They prep your days, todos, and meetings for you.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/mchlkucera/waxpad/releases" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download for macOS
+          </a>
+          <a href="https://github.com/mchlkucera/waxpad" class="btn btn-ghost">Source on GitHub</a>
+        </div>
+        <p class="install-hint"><code>brew install mchlkucera/tap/waxpad</code></p>
+        <div class="kbd-hint">
+          <kbd>&#8997;</kbd>
+          <span class="kbd-plus">+</span>
+          <kbd>N</kbd>
+          <span class="kbd-label">to summon</span>
+        </div>
+      </section>
+
+      <!-- Workflow inspiration -->
+      <section class="uses">
+        <h2 class="uses-heading fade-in">Workflow inspiration</h2>
+        <p class="uses-intro">None of this is built in. Waxpad is just a markdown editor — but the files live on disk, so your AI agent reads and writes them. Here's what that unlocks:</p>
+
+        <div class="use-case fade-in" data-mockup-tab="0">
+          <span class="use-case-number">01</span>
+          <h2 class="use-case-title">Morning prep</h2>
+          <p class="use-case-desc">Your agent reads your calendar and git history, fills in today's note. Open Waxpad — day's already laid out.</p>
+        </div>
+
+        <div class="use-case fade-in" data-mockup-tab="1">
+          <span class="use-case-number">02</span>
+          <h2 class="use-case-title">Standup prep</h2>
+          <p class="use-case-desc">A brief standup from yesterday's commits. PRs shipped, bugs hit, blockers. Copy-paste into Slack.</p>
+        </div>
+
+        <div class="use-case fade-in" data-mockup-tab="2">
+          <span class="use-case-number">03</span>
+          <h2 class="use-case-title">Meeting prep</h2>
+          <p class="use-case-desc">All context in one floating note — candidate info, colleague notes, prep questions. Visible while you're on the call.</p>
+        </div>
+
+        <div class="use-case fade-in" data-mockup-tab="3">
+          <span class="use-case-number">04</span>
+          <h2 class="use-case-title">After-day cleanup</h2>
+          <p class="use-case-desc">Messy day notes sorted and moved to your Obsidian daily note. Close the laptop, the day is captured.</p>
+        </div>
+      </section>
+
+      <p class="footer-credit fade-in">Made in Brno by <a href="https://github.com/mchlkucera">Mike Oxhard</a></p>
+
+    </div>
+
+    <!-- Right column: fixed mockup -->
+    <div class="mockup-col">
+      <div class="mockup-wrap" id="mockup-wrap">
+        <div class="mockup-glow"></div>
+        <div class="mockup" id="mockup">
+          <!-- Tabs (no title bar — matches real app) -->
           <div class="mockup-tabs">
-            <span class="tab active">Work</span>
-            <span class="tab">Side Project</span>
-            <span class="tab">Reading</span>
+            <span class="tab active" data-tab="0">Today</span>
+            <span class="tab" data-tab="1">Standup</span>
+            <span class="tab" data-tab="2">Interview</span>
+            <span class="tab" data-tab="3">Cleanup</span>
+            <span class="tab tab-add">+</span>
+          </div>
+
+          <div class="mockup-body-wrap">
+          <!-- Tab 0: Morning prep — AI filled from calendar + git -->
+          <div class="mockup-body tab-content active" data-tab-content="0" contenteditable="true" spellcheck="false">
+            <h2 class="mockup-h2">Thursday, April 24</h2>
+            <hr class="mockup-hr">
+            <h3 class="mockup-h3">Morning</h3>
+            <p class="mockup-check checked"><span class="check-dash">- </span><span class="check-box checked"><svg width="14" height="14" viewBox="0 0 14 14"><rect width="14" height="14" rx="3" fill="#4D8EFF"/><path d="M4 7.5L6 9.5L10 4.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span> <s>Review <a href="#" class="mockup-link">PR #312</a> — auth refactor</s></p>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> Standup (9:15)</p>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Ship <a href="#" class="mockup-link">onboarding flow v2</a></span></p>
+            <h3 class="mockup-h3">Afternoon</h3>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Interview — <a href="#" class="mockup-link">Sarah Chen</a> (14:00)</span></p>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Write <a href="#" class="mockup-link">migration guide</a></span></p>
+            <h3 class="mockup-h3">Carry-over</h3>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Load testing (<a href="#" class="mockup-link">JIRA-428</a>, from Tuesday)</span></p>
+            <p class="mockup-ai-note">// filled by claude from Google Calendar + GitHub</p>
+          </div>
+
+          <!-- Tab 1: Standup — brief, specific, copy-paste ready -->
+          <div class="mockup-body tab-content" data-tab-content="1" contenteditable="true" spellcheck="false">
+            <h2 class="mockup-h2">Standup — April 24</h2>
+            <hr class="mockup-hr">
+            <h3 class="mockup-h3">Yesterday</h3>
+            <p class="mockup-p">- Shipped auth refactor (<a href="#" class="mockup-link">PR #312</a>, merged)</p>
+            <p class="mockup-p">- Got stuck on flaky integration test — Redis pool exhausted under parallel runs. Fixed in <a href="#" class="mockup-link">commit 4a8f2c</a></p>
+            <p class="mockup-p">- Reviewed Jake's <a href="#" class="mockup-link">API deprecation docs</a></p>
+            <h3 class="mockup-h3">Today</h3>
+            <p class="mockup-p">- <a href="#" class="mockup-link">Onboarding flow v2</a> — targeting <a href="#" class="mockup-link">staging</a> deploy by EOD</p>
+            <p class="mockup-p">- Interview: <a href="#" class="mockup-link">Sarah Chen</a> at 14:00</p>
+            <p class="mockup-p">- Migration guide first draft</p>
+            <h3 class="mockup-h3">Blockers</h3>
+            <p class="mockup-p">- Waiting on design for empty states (<a href="#" class="mockup-link">Figma</a>, Sarah, ETA Monday)</p>
+            <p class="mockup-ai-note">// generated from git log + calendar by claude</p>
+          </div>
+
+          <!-- Tab 2: Interview prep — candidate context -->
+          <div class="mockup-body tab-content" data-tab-content="2" contenteditable="true" spellcheck="false">
+            <h2 class="mockup-h2">Interview — Sarah Chen</h2>
+            <hr class="mockup-hr">
+            <p class="mockup-p"><strong>Role:</strong> Senior Frontend Engineer</p>
+            <p class="mockup-p"><strong>LinkedIn:</strong> <a href="#" class="mockup-link">linkedin.com/in/sarachen</a> — 6 yrs React, prev. Stripe, Vercel</p>
+            <p class="mockup-p"><strong>Resume flag:</strong> Led design system at Stripe (2022-24)</p>
+            <p class="mockup-p"><strong>Blog:</strong> <a href="#" class="mockup-link">"Why We Killed Our Component Library"</a> — good signal on API taste</p>
+            <h3 class="mockup-h3">From Jake (hiring manager)</h3>
+            <p class="mockup-p">- Strong system thinker, ask about component API design</p>
+            <p class="mockup-p">- Concerned about our bundle size — probe on perf instincts</p>
+            <h3 class="mockup-h3">Your questions</h3>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> Walk me through a component you're proud of</p>
+            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> How would you reduce our 340kb JS bundle?</p>
+            <p class="mockup-ai-note">// context pulled from LinkedIn + Lever + Slack by claude</p>
+          </div>
+
+          <!-- Tab 3: After-day cleanup — messy notes crossed out + moved -->
+          <div class="mockup-body tab-content" data-tab-content="3" contenteditable="true" spellcheck="false">
+            <h2 class="mockup-h2">Scratch</h2>
+            <hr class="mockup-hr">
+            <p class="mockup-p cleanup-note">websockets instead of polling for dashboard?</p>
+            <p class="mockup-p cleanup-note mockup-indent">- would cut latency from ~2s to instant</p>
+            <p class="mockup-p cleanup-note mockup-indent">- ask Marcus about Redis caching layer</p>
+            <p class="mockup-p cleanup-note">&nbsp;</p>
+            <p class="mockup-p cleanup-note">bug: login redirect loop on Safari 17.2</p>
+            <p class="mockup-p cleanup-note mockup-indent">- only when 3rd party cookies blocked</p>
+            <p class="mockup-p cleanup-note mockup-indent">- <a href="#" class="mockup-link">repro in #frontend</a></p>
+            <p class="mockup-p cleanup-note">&nbsp;</p>
+            <p class="mockup-p cleanup-note">legacy API sunset — migration guide by May 15</p>
+            <p class="mockup-check cleanup-note"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> book dentist Friday</p>
+            <p class="mockup-p cleanup-note">Sarah: empty state designs ETA Monday</p>
+            <p class="mockup-p cleanup-note">&nbsp;</p>
+            <p class="mockup-p cleanup-note">retro prep — what went wrong with v1</p>
+            <p class="mockup-p cleanup-note mockup-indent">- deploys took 12min, no rollback</p>
+            <p class="mockup-p cleanup-note mockup-indent">- zero monitoring on checkout flow</p>
+            <p class="mockup-p cleanup-note">&nbsp;</p>
+            <p class="mockup-p cleanup-note">mushroom risotto recipe — ask Marco</p>
+            <p class="mockup-p cleanup-note">look into <a href="#" class="mockup-link">Turso</a> for edge db</p>
+            <p class="mockup-hr-text cleanup-divider">---</p>
+            <p class="mockup-p cleanup-counter">Moved <span class="cleanup-count">0</span>/18 notes → <code>~/vault/inbox/2026-04-24.md</code></p>
+            <p class="mockup-p cleanup-stat">All safe in your vault. Nothing lost.</p>
+            <p class="mockup-p cleanup-stat">Have a great evening.</p>
+            <p class="mockup-ai-note cleanup-stat">// claude, 17:02</p>
+          </div>
           </div>
         </div>
-        <div class="mockup-body" contenteditable="true" spellcheck="false">
-          <h2 class="mockup-title">Work</h2>
-          <div class="checkbox-line">
-            <span class="checkbox checked" data-checkbox></span>
-            <span class="checkbox-text">Review PR #247 — auth token refresh</span>
-          </div>
-          <div class="checkbox-line">
-            <span class="checkbox checked" data-checkbox></span>
-            <span class="checkbox-text">Ship landing page v1</span>
-          </div>
-          <div class="checkbox-line">
-            <span class="checkbox" data-checkbox></span>
-            <span class="checkbox-text">Ask Claude to audit the onboarding flow</span>
-          </div>
-          <div class="checkbox-line">
-            <span class="checkbox" data-checkbox></span>
-            <span class="checkbox-text">Write changelog for 0.3.0</span>
-          </div>
-          <div class="checkbox-line">
-            <span class="checkbox" data-checkbox></span>
-            <span class="checkbox-text">Ping Tom about API docs</span>
-          </div>
-        </div>
+        <p class="mockup-caption"></p>
       </div>
     </div>
-    <p class="mockup-caption">// try clicking the checkboxes</p>
-  </section>
 
-  <!-- Story -->
-  <section class="story">
-    <p class="story-line fade-in">I loved Raycast Notes. Fast, minimal, always one keystroke away.</p>
-    <p class="story-line fade-in">But my notes were locked inside Raycast. My AI agent couldn't see them. No export. No local files.</p>
-    <p class="story-line fade-in">So I built Waxpad. Same floating window. Same markdown. But your notes are just <code>.md</code> files in <code>~/.waxpad/</code> &mdash; and any tool can read them.</p>
-  </section>
-
-  <!-- Features -->
-  <section class="features">
-    <div class="feature fade-in">
-      <span class="feature-label">~/.waxpad/*.md</span>
-      <p class="feature-desc">Plain markdown files on disk. Claude, Cursor, grep &mdash; they all just work.</p>
-    </div>
-    <div class="feature fade-in">
-      <span class="feature-label">Option + N</span>
-      <p class="feature-desc">Summon the window from anywhere. It floats above everything.</p>
-    </div>
-    <div class="feature fade-in">
-      <span class="feature-label">Live markdown</span>
-      <p class="feature-desc">Headings, checkboxes, code blocks &mdash; rendered as you type.</p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta fade-in">
-    <h2>Try it.</h2>
-    <div class="buttons">
-      <a href="https://github.com/mchlkucera/waxpad/releases" class="btn btn-primary">Download for macOS</a>
-      <a href="https://github.com/mchlkucera/waxpad" class="btn btn-secondary">View on GitHub</a>
-    </div>
-    <p class="footer">Made in Brno by Michal Kucera</p>
-  </section>
+  </div>
 
   <script src="main.js"></script>
 </body>
