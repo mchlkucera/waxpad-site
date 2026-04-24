@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waxpad — Floating Markdown Notepad for macOS</title>
+  <meta name="description" content="A tiny, beautiful markdown pad that floats over everything. Summon it with a keystroke. Write in markdown. Dismiss it. That's it.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-headline">Your floating scratchpad for macOS.</h1>
+      <p class="hero-sub">A tiny, beautiful markdown pad that floats over everything.<br>Summon it with a keystroke. Write in markdown. Dismiss it. That's it.</p>
+      <div class="hero-cta-group">
+        <a href="https://github.com/mchlkucera/waxpad/releases" class="btn btn-primary">Download for macOS</a>
+      </div>
+      <p class="hero-meta">Free and open source. macOS 13+. No account needed.</p>
+
+      <!-- Product mockup -->
+      <div class="mockup-glow">
+        <div class="mockup">
+          <div class="mockup-titlebar">
+            <div class="mockup-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+          </div>
+          <div class="mockup-tabs">
+            <span class="tab tab-active">Work</span>
+            <span class="tab">Side Project</span>
+            <span class="tab">Reading</span>
+            <span class="tab tab-add">+</span>
+          </div>
+          <div class="mockup-content">
+            <h2 class="mockup-title">Work</h2>
+            <div class="mockup-line">
+              <span class="checkbox checked"></span>
+              <span class="mockup-text">Ship landing page for Waxpad</span>
+            </div>
+            <div class="mockup-line">
+              <span class="checkbox checked"></span>
+              <span class="mockup-text">Review PR <span class="mockup-code">#42</span> — auth refactor</span>
+            </div>
+            <div class="mockup-line">
+              <span class="checkbox"></span>
+              <span class="mockup-text"><strong>Prepare demo</strong> for Friday standup</span>
+            </div>
+            <div class="mockup-line">
+              <span class="checkbox"></span>
+              <span class="mockup-text">Email Anna re: Q3 roadmap</span>
+            </div>
+            <div class="mockup-line mockup-line-indent">
+              <span class="mockup-text mockup-muted">Context: she asked about timeline on Monday</span>
+            </div>
+            <div class="mockup-line">
+              <span class="checkbox"></span>
+              <span class="mockup-text">Read <a href="#" class="mockup-link">this article</a> on local-first sync</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section class="manifesto">
+    <div class="container">
+      <p class="manifesto-text">Every app wants to be your second brain. Waxpad just wants to be your sticky note.</p>
+    </div>
+  </section>
+
+  <!-- Three Pillars -->
+  <section class="pillars" id="features">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar fade-in">
+          <h3 class="pillar-title">Always there.</h3>
+          <p class="pillar-desc">One keystroke and it appears. Another and it's gone. Floats above everything.</p>
+        </div>
+        <div class="pillar fade-in">
+          <h3 class="pillar-title">Pure markdown.</h3>
+          <p class="pillar-desc">Live-styled editing. Checkboxes, links, headings — all as <code>.md</code> files on disk.</p>
+        </div>
+        <div class="pillar fade-in">
+          <h3 class="pillar-title">Your files.</h3>
+          <p class="pillar-desc">Notes live in <code>~/.quick-notes/</code> as plain markdown. No cloud, no database, no lock-in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keyboard Shortcuts -->
+  <section class="shortcuts fade-in">
+    <div class="container">
+      <h2 class="section-title">Keyboard-first.</h2>
+      <div class="shortcuts-grid">
+        <div class="shortcut-row">
+          <kbd>Option</kbd> + <kbd>N</kbd>
+          <span class="shortcut-label">Toggle window</span>
+        </div>
+        <div class="shortcut-row">
+          <kbd>Cmd</kbd> + <kbd>Enter</kbd>
+          <span class="shortcut-label">Toggle checkbox</span>
+        </div>
+        <div class="shortcut-row">
+          <kbd>Cmd</kbd> + <kbd>B</kbd> / <kbd>I</kbd> / <kbd>E</kbd>
+          <span class="shortcut-label">Bold, italic, code</span>
+        </div>
+        <div class="shortcut-row">
+          <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd>
+          <span class="shortcut-label">Indent lists</span>
+        </div>
+        <div class="shortcut-row">
+          <kbd>Enter</kbd> <span class="shortcut-context">on list item</span>
+          <span class="shortcut-label">Continue list</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Strip -->
+  <section class="tech-strip fade-in">
+    <div class="container">
+      <div class="tech-items">
+        <span class="tech-item">Written in Swift</span>
+        <span class="tech-divider"></span>
+        <span class="tech-item">~4 MB binary</span>
+        <span class="tech-divider"></span>
+        <span class="tech-item">Native macOS</span>
+        <span class="tech-divider"></span>
+        <span class="tech-item">Open source</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta fade-in">
+    <div class="container">
+      <h2 class="final-headline">A notepad that stays out of your way.</h2>
+      <div class="final-buttons">
+        <a href="https://github.com/mchlkucera/waxpad/releases" class="btn btn-primary">Download Waxpad</a>
+        <a href="https://github.com/mchlkucera/waxpad" class="btn btn-ghost">Star on GitHub</a>
+      </div>
+      <p class="footer-credit">Made in Brno by Michal Kucera</p>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
