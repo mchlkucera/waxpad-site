@@ -568,7 +568,7 @@ a:hover {
 }
 
 .site-footer {
-  margin-top: var(--sp-48);
+  margin-top: 80px;
   padding-bottom: var(--sp-32);
   text-align: left;
 }
@@ -594,11 +594,11 @@ a:hover {
 
 .footer-ai {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--ts-xs);
   color: var(--text-muted);
-  opacity: 0.45;
+  opacity: 0.5;
   margin-top: var(--sp-8);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* --- Mockup (Fixed on Right) --- */
