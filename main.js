@@ -287,7 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
       box.innerHTML = checkedSvg;
       if (line) {
         line.classList.add('checked');
-        // Wrap remaining text nodes and inline elements in <s>
         const nodes = Array.from(line.childNodes).filter(n =>
           n !== box && !n.classList?.contains('check-dash') && !n.classList?.contains('check-box')
         );
@@ -299,5 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
 
 });
