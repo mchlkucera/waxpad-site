@@ -98,83 +98,91 @@
           </div>
 
           <div class="mockup-body-wrap">
-          <!-- Tab 0: Morning prep — AI filled from calendar + git -->
-          <div class="mockup-body tab-content active" data-tab-content="0" contenteditable="true" spellcheck="false">
-            <h2 class="mockup-h2">Thursday, April 24</h2>
-            <hr class="mockup-hr">
-            <h3 class="mockup-h3">Morning</h3>
-            <p class="mockup-check checked"><span class="check-dash">- </span><span class="check-box checked"><svg width="14" height="14" viewBox="0 0 14 14"><rect width="14" height="14" rx="3" fill="#4D8EFF"/><path d="M4 7.5L6 9.5L10 4.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span> <s>Review <a href="#" class="mockup-link">PR #312</a> — auth refactor</s></p>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> Standup (9:15)</p>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Ship <a href="#" class="mockup-link">onboarding flow v2</a></span></p>
-            <h3 class="mockup-h3">Afternoon</h3>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Interview — <a href="#" class="mockup-link">Sarah Chen</a> (14:00)</span></p>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Write <a href="#" class="mockup-link">migration guide</a></span></p>
-            <h3 class="mockup-h3">Carry-over</h3>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span><span>Load testing (<a href="#" class="mockup-link">JIRA-428</a>, from Tuesday)</span></p>
-            <p class="mockup-ai-note">// filled by claude from Google Calendar + GitHub</p>
+          <!-- Tab 0: Morning prep — matches native app raw markdown -->
+          <div class="mockup-body tab-content active" data-tab-content="0">
+            <div class="md-line md-heading"><span class="md-syntax">## </span><strong>Today</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Review <a href="#" class="md-link">PR #312</a> — auth refactor</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Standup (9:15)</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Ship <a href="#" class="md-link">onboarding flow v2</a></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Afternoon</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Interview — <a href="#" class="md-link">Sarah Chen</a> (14:00)</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Write <a href="#" class="md-link">migration guide</a></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Carry-over</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Load testing (<a href="#" class="md-link">JIRA-428</a>, from Tuesday)</div>
+            <div class="md-line md-ai-note">// filled by claude from Google Cal + GitHub</div>
           </div>
 
-          <!-- Tab 1: Standup — brief, specific, copy-paste ready -->
-          <div class="mockup-body tab-content" data-tab-content="1" contenteditable="true" spellcheck="false">
-            <h2 class="mockup-h2">Standup — April 24</h2>
-            <hr class="mockup-hr">
-            <h3 class="mockup-h3">Yesterday</h3>
-            <p class="mockup-p">- Shipped auth refactor (<a href="#" class="mockup-link">PR #312</a>, merged)</p>
-            <p class="mockup-p">- Got stuck on flaky integration test — Redis pool exhausted under parallel runs. Fixed in <a href="#" class="mockup-link">commit 4a8f2c</a></p>
-            <p class="mockup-p">- Reviewed Jake's <a href="#" class="mockup-link">API deprecation docs</a></p>
-            <h3 class="mockup-h3">Today</h3>
-            <p class="mockup-p">- <a href="#" class="mockup-link">Onboarding flow v2</a> — targeting <a href="#" class="mockup-link">staging</a> deploy by EOD</p>
-            <p class="mockup-p">- Interview: <a href="#" class="mockup-link">Sarah Chen</a> at 14:00</p>
-            <p class="mockup-p">- Migration guide first draft</p>
-            <h3 class="mockup-h3">Blockers</h3>
-            <p class="mockup-p">- Waiting on design for empty states (<a href="#" class="mockup-link">Figma</a>, Sarah, ETA Monday)</p>
-            <p class="mockup-ai-note">// generated from git log + calendar by claude</p>
+          <!-- Tab 1: Standup -->
+          <div class="mockup-body tab-content" data-tab-content="1">
+            <div class="md-line md-heading"><span class="md-syntax">## </span><strong>Standup — April 24</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Yesterday</strong></div>
+            <div class="md-line"><span class="md-syntax">- </span>Shipped auth refactor (<a href="#" class="md-link">PR #312</a>, merged)</div>
+            <div class="md-line"><span class="md-syntax">- </span>Fixed flaky Redis test in <a href="#" class="md-link">4a8f2c</a></div>
+            <div class="md-line"><span class="md-syntax">- </span>Reviewed Jake's <a href="#" class="md-link">API deprecation docs</a></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Today</strong></div>
+            <div class="md-line"><span class="md-syntax">- </span><a href="#" class="md-link">Onboarding flow v2</a> → staging by EOD</div>
+            <div class="md-line"><span class="md-syntax">- </span>Interview: <a href="#" class="md-link">Sarah Chen</a> at 14:00</div>
+            <div class="md-line"><span class="md-syntax">- </span>Migration guide first draft</div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Blockers</strong></div>
+            <div class="md-line"><span class="md-syntax">- </span>Waiting on design for empty states (<a href="#" class="md-link">Figma</a>, ETA Monday)</div>
+            <div class="md-line md-ai-note">// generated from git log + calendar by claude</div>
           </div>
 
-          <!-- Tab 2: Interview prep — candidate context -->
-          <div class="mockup-body tab-content" data-tab-content="2" contenteditable="true" spellcheck="false">
-            <h2 class="mockup-h2">Interview — Sarah Chen</h2>
-            <hr class="mockup-hr">
-            <p class="mockup-p"><strong>Role:</strong> Senior Frontend Engineer</p>
-            <p class="mockup-p"><strong>LinkedIn:</strong> <a href="#" class="mockup-link">linkedin.com/in/sarachen</a> — 6 yrs React, prev. Stripe, Vercel</p>
-            <p class="mockup-p"><strong>Resume flag:</strong> Led design system at Stripe (2022-24)</p>
-            <p class="mockup-p"><strong>Blog:</strong> <a href="#" class="mockup-link">"Why We Killed Our Component Library"</a> — good signal on API taste</p>
-            <h3 class="mockup-h3">From Jake (hiring manager)</h3>
-            <p class="mockup-p">- Strong system thinker, ask about component API design</p>
-            <p class="mockup-p">- Concerned about our bundle size — probe on perf instincts</p>
-            <h3 class="mockup-h3">Your questions</h3>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> Walk me through a component you're proud of</p>
-            <p class="mockup-check"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> How would you reduce our 340kb JS bundle?</p>
-            <p class="mockup-ai-note">// context pulled from LinkedIn + Lever + Slack by claude</p>
+          <!-- Tab 2: Interview prep -->
+          <div class="mockup-body tab-content" data-tab-content="2">
+            <div class="md-line md-heading"><span class="md-syntax">## </span><strong>Interview — Sarah Chen</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line"><strong>Role:</strong> Senior Frontend Engineer</div>
+            <div class="md-line"><strong>LinkedIn:</strong> <a href="#" class="md-link">linkedin.com/in/sarachen</a> — 6 yrs React, prev. Stripe, Vercel</div>
+            <div class="md-line"><strong>Resume flag:</strong> Led design system at Stripe (2022-24)</div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>From Jake (hiring manager)</strong></div>
+            <div class="md-line"><span class="md-syntax">- </span>Strong system thinker, ask about component API design</div>
+            <div class="md-line"><span class="md-syntax">- </span>Concerned about bundle size — probe on perf</div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line md-subheading"><span class="md-syntax">### </span><strong>Your questions</strong></div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>Walk me through a component you're proud of</div>
+            <div class="md-line"><span class="md-syntax">- [ ] </span>How would you reduce our 340kb JS bundle?</div>
+            <div class="md-line md-ai-note">// context pulled from LinkedIn + Lever + Slack</div>
           </div>
 
-          <!-- Tab 3: After-day cleanup — messy notes crossed out + moved -->
-          <div class="mockup-body tab-content" data-tab-content="3" contenteditable="true" spellcheck="false">
-            <h2 class="mockup-h2">Scratch</h2>
-            <hr class="mockup-hr">
-            <p class="mockup-p cleanup-note">websockets instead of polling for dashboard?</p>
-            <p class="mockup-p cleanup-note mockup-indent">- would cut latency from ~2s to instant</p>
-            <p class="mockup-p cleanup-note mockup-indent">- ask Marcus about Redis caching layer</p>
-            <p class="mockup-p cleanup-note">&nbsp;</p>
-            <p class="mockup-p cleanup-note">bug: login redirect loop on Safari 17.2</p>
-            <p class="mockup-p cleanup-note mockup-indent">- only when 3rd party cookies blocked</p>
-            <p class="mockup-p cleanup-note mockup-indent">- <a href="#" class="mockup-link">repro in #frontend</a></p>
-            <p class="mockup-p cleanup-note">&nbsp;</p>
-            <p class="mockup-p cleanup-note">legacy API sunset — migration guide by May 15</p>
-            <p class="mockup-check cleanup-note"><span class="check-dash">- </span><span class="check-box"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg></span> book dentist Friday</p>
-            <p class="mockup-p cleanup-note">Sarah: empty state designs ETA Monday</p>
-            <p class="mockup-p cleanup-note">&nbsp;</p>
-            <p class="mockup-p cleanup-note">retro prep — what went wrong with v1</p>
-            <p class="mockup-p cleanup-note mockup-indent">- deploys took 12min, no rollback</p>
-            <p class="mockup-p cleanup-note mockup-indent">- zero monitoring on checkout flow</p>
-            <p class="mockup-p cleanup-note">&nbsp;</p>
-            <p class="mockup-p cleanup-note">mushroom risotto recipe — ask Marco</p>
-            <p class="mockup-p cleanup-note">look into <a href="#" class="mockup-link">Turso</a> for edge db</p>
-            <p class="mockup-hr-text cleanup-divider">---</p>
-            <p class="mockup-p cleanup-counter">Moved <span class="cleanup-count">0</span>/18 notes → <code>~/vault/inbox/2026-04-24.md</code></p>
-            <p class="mockup-p cleanup-stat">All safe in your vault. Nothing lost.</p>
-            <p class="mockup-p cleanup-stat">Have a great evening.</p>
-            <p class="mockup-ai-note cleanup-stat">// claude, 17:02</p>
+          <!-- Tab 3: After-day cleanup -->
+          <div class="mockup-body tab-content" data-tab-content="3">
+            <div class="md-line md-heading"><span class="md-syntax">## </span><strong>Scratch</strong></div>
+            <div class="md-line md-blank">&nbsp;</div>
+            <div class="md-line cleanup-note">websockets instead of polling for dashboard?</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span>would cut latency from ~2s to instant</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span>ask Marcus about Redis caching layer</div>
+            <div class="md-line cleanup-note md-blank">&nbsp;</div>
+            <div class="md-line cleanup-note">bug: login redirect loop on Safari 17.2</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span>only when 3rd party cookies blocked</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span><a href="#" class="md-link">repro in #frontend</a></div>
+            <div class="md-line cleanup-note md-blank">&nbsp;</div>
+            <div class="md-line cleanup-note">legacy API sunset — migration guide by May 15</div>
+            <div class="md-line cleanup-note"><span class="md-syntax">- [ ] </span>book dentist Friday</div>
+            <div class="md-line cleanup-note">Sarah: empty state designs ETA Monday</div>
+            <div class="md-line cleanup-note md-blank">&nbsp;</div>
+            <div class="md-line cleanup-note">retro prep — what went wrong with v1</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span>deploys took 12min, no rollback</div>
+            <div class="md-line cleanup-note md-indent"><span class="md-syntax">- </span>zero monitoring on checkout flow</div>
+            <div class="md-line cleanup-note md-blank">&nbsp;</div>
+            <div class="md-line cleanup-note">mushroom risotto recipe — ask Marco</div>
+            <div class="md-line cleanup-note">look into <a href="#" class="md-link">Turso</a> for edge db</div>
+            <div class="md-line cleanup-divider">---</div>
+            <div class="md-line cleanup-counter">Moved <span class="cleanup-count">0</span>/18 notes → <code>~/vault/inbox/2026-04-24.md</code></div>
+            <div class="md-line cleanup-stat">All safe in your vault. Nothing lost.</div>
+            <div class="md-line cleanup-stat">Have a great evening.</div>
+            <div class="md-line md-ai-note cleanup-stat">// claude, 17:02</div>
           </div>
           </div>
         </div>

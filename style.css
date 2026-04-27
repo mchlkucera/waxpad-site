@@ -577,7 +577,6 @@ a:hover {
 .mockup-body {
   padding: 20px 24px 24px;
   outline: none;
-  cursor: text;
 }
 
 .tab-content {
@@ -599,109 +598,55 @@ a:hover {
   visibility: visible;
 }
 
-.mockup-h2 {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  color: var(--text-primary);
-}
+/* --- Plain-text markdown lines (matches native app) --- */
 
-.mockup-hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 0 0 12px;
-}
-
-.mockup-h3 {
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 14px 0 6px;
-}
-
-.mockup-p {
+.md-line {
   font-size: 0.85rem;
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--text-primary);
-  margin: 8px 0;
+  white-space: pre-wrap;
+  font-family: var(--font-body);
 }
 
-.mockup-p code {
-  font-size: 0.88em;
-  padding: 1px 5px;
+.md-line.md-blank {
+  line-height: 0.9;
 }
 
-.mockup-hr-text {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+.md-line.md-heading {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.md-line.md-subheading {
+  font-size: 0.95rem;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.md-syntax {
   color: var(--text-muted);
-  margin: 16px 0;
-  letter-spacing: 0.1em;
+  font-weight: 400;
 }
 
-.mockup-check {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--text-primary);
-  margin: 3px 0;
-  display: flex;
-  align-items: baseline;
+.md-indent {
+  padding-left: 18px;
 }
 
-.mockup-check.checked {
-  color: var(--text-muted);
-}
-
-.mockup-check s {
-  color: var(--text-muted);
-  text-decoration: line-through;
-}
-
-.mockup-check s .mockup-link {
-  color: var(--text-muted);
-}
-
-.check-dash {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  color: var(--text-muted);
-  user-select: none;
-  white-space: pre;
-  flex-shrink: 0;
-}
-
-.check-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  margin-right: 6px;
-  position: relative;
-  top: 1px;
-  cursor: pointer;
-}
-
-.check-box svg {
-  display: block;
-}
-
-.mockup-link {
+.md-link {
   color: var(--accent);
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* AI annotation lines — subtle ghost comments */
-.mockup-ai-note {
+.md-link:hover {
+  color: var(--accent-hover);
+}
+
+.md-line.md-ai-note {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: rgba(77, 142, 255, 0.4);
-  margin: 12px 0 4px;
+  margin-top: 12px;
   line-height: 1.6;
 }
 
@@ -749,10 +694,6 @@ a:hover {
 
 /* --- Cleanup tab animation --- */
 
-.mockup-indent {
-  padding-left: 16px;
-}
-
 .cleanup-note {
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
@@ -763,7 +704,8 @@ a:hover {
   color: var(--text-muted);
 }
 
-.cleanup-crossed .mockup-link {
+.cleanup-crossed .md-syntax,
+.cleanup-crossed .md-link {
   color: var(--text-muted);
 }
 

@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       lineIndex++;
 
-      const tag = line.tagName?.toLowerCase();
       let delay = perLine;
-      if (tag === 'h2' || tag === 'hr') delay = 10;
-      else if (tag === 'h3') delay = 15;
+      if (line.classList.contains('md-heading')) delay = 10;
+      else if (line.classList.contains('md-subheading')) delay = 15;
+      else if (line.classList.contains('md-blank')) delay = 5;
       else delay = perLine + Math.random() * 10;
 
       setTimeout(revealNext, delay);
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const divider = container.querySelector('.cleanup-divider');
     const counterEl = container.querySelector('.cleanup-counter');
     const countSpan = container.querySelector('.cleanup-count');
-    const stats = Array.from(container.querySelectorAll('.cleanup-stat'));
+    const stats = Array.from(container.querySelectorAll('.cleanup-stat')).filter(el => !el.classList.contains('cleanup-divider') && !el.classList.contains('cleanup-counter'));
 
     // Reset all state
     lines.forEach(el => {
@@ -261,43 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
     useCases[0].classList.add('is-active');
   }
 
-  // --- Clickable checkboxes ---
-  const uncheckedSvg = '<svg width="14" height="14" viewBox="0 0 14 14"><rect x="0.5" y="0.5" width="13" height="13" rx="2.5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>';
-  const checkedSvg = '<svg width="14" height="14" viewBox="0 0 14 14"><rect width="14" height="14" rx="3" fill="#4D8EFF"/><path d="M4 7.5L6 9.5L10 4.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
-
-  document.addEventListener('click', (e) => {
-    const box = e.target.closest('.check-box');
-    if (!box) return;
-    e.preventDefault();
-    e.stopPropagation();
-
-    const line = box.closest('.mockup-check');
-    const isChecked = box.classList.contains('checked');
-
-    if (isChecked) {
-      box.classList.remove('checked');
-      box.innerHTML = uncheckedSvg;
-      if (line) {
-        line.classList.remove('checked');
-        const s = line.querySelector('s');
-        if (s) s.replaceWith(...s.childNodes);
-      }
-    } else {
-      box.classList.add('checked');
-      box.innerHTML = checkedSvg;
-      if (line) {
-        line.classList.add('checked');
-        const nodes = Array.from(line.childNodes).filter(n =>
-          n !== box && !n.classList?.contains('check-dash') && !n.classList?.contains('check-box')
-        );
-        if (nodes.length && !line.querySelector('s')) {
-          const s = document.createElement('s');
-          nodes.forEach(n => s.appendChild(n));
-          line.appendChild(s);
-        }
-      }
-    }
-  });
 
 
 });
