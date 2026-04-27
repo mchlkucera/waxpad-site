@@ -567,22 +567,19 @@ a:hover {
   font-weight: 500;
 }
 
-.footer-ai {
-  font-family: var(--font-mono);
-  font-size: var(--ts-xs);
-  color: var(--text-muted);
-  line-height: 1.6;
+.site-footer {
   margin-top: var(--sp-48);
-  opacity: 0.6;
+  padding-bottom: var(--sp-32);
+  text-align: left;
 }
 
-.footer-ai a {
+.site-footer a {
   color: var(--text-muted);
   border-bottom: 1px solid var(--border);
   transition: color 0.2s, border-color 0.2s;
 }
 
-.footer-ai a:hover {
+.site-footer a:hover {
   color: var(--text-secondary);
   border-color: var(--text-secondary);
 }
@@ -593,19 +590,15 @@ a:hover {
   color: var(--text-muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-top: var(--sp-32);
-  padding-bottom: var(--sp-32);
 }
 
-.footer-credit a {
+.footer-ai {
+  font-family: var(--font-mono);
+  font-size: 10px;
   color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.footer-credit a:hover {
-  color: var(--text-secondary);
-  border-color: var(--text-secondary);
+  opacity: 0.45;
+  margin-top: var(--sp-8);
+  line-height: 1.5;
 }
 
 /* --- Mockup (Fixed on Right) --- */
@@ -1058,7 +1051,7 @@ a:hover {
     max-width: none;
   }
 
-  .footer-credit {
+  .site-footer {
     text-align: center;
     margin-top: var(--sp-16);
     padding-bottom: var(--sp-16);
