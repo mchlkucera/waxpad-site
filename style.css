@@ -268,16 +268,95 @@ a:hover {
   transform: translateY(0) scale(0.98);
 }
 
-/* --- Install Hint --- */
+/* --- Brew Install CTA --- */
 
-.install-hint {
+.brew-install {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-md);
+  padding: 10px 12px 10px 20px;
+  margin-bottom: var(--sp-4);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brew-install:hover {
+  border-color: rgba(77, 142, 255, 0.3);
+  box-shadow: 0 0 30px 4px rgba(77, 142, 255, 0.06);
+}
+
+.brew-command {
+  font-family: var(--font-mono);
+  font-size: var(--ts-base);
+  font-weight: 500;
+  color: var(--text-primary);
+  background: none;
+  padding: 0;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.brew-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: var(--sp-3);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.brew-copy:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.brew-copy .icon-check {
+  display: none;
+  color: #34D399;
+}
+
+.brew-copy.copied .icon-clipboard {
+  display: none;
+}
+
+.brew-copy.copied .icon-check {
+  display: block;
+}
+
+.getting-started {
   font-family: var(--font-mono);
   font-size: var(--ts-xs);
   color: var(--text-muted);
-  margin-top: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  letter-spacing: 0.02em;
 }
 
-.install-hint code {
+.getting-started kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--ts-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}
+
+.getting-started code {
   font-size: inherit;
   background: none;
   color: var(--text-secondary);
@@ -911,14 +990,18 @@ a:hover {
     padding: 8px 12px;
   }
 
-  /* Install hint: allow wrapping on small screens */
-  .install-hint {
-    word-break: break-all;
-    text-align: center;
+  /* Brew install: center on mobile */
+  .brew-install {
+    width: 100%;
+    justify-content: center;
   }
 
-  .install-hint code {
-    word-break: break-all;
+  .brew-command {
+    font-size: var(--ts-sm);
+  }
+
+  .getting-started {
+    text-align: center;
   }
 
   .origin-img {
