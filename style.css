@@ -567,6 +567,26 @@ a:hover {
   font-weight: 500;
 }
 
+.footer-ai {
+  font-family: var(--font-mono);
+  font-size: var(--ts-xs);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: var(--sp-48);
+  opacity: 0.6;
+}
+
+.footer-ai a {
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-ai a:hover {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
+
 .footer-credit {
   font-family: var(--font-mono);
   font-size: var(--ts-xs);
