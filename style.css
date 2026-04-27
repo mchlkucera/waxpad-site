@@ -334,10 +334,23 @@ a:hover {
 
 .getting-started {
   font-family: var(--font-mono);
-  font-size: var(--ts-xs);
-  color: var(--text-muted);
+  font-size: var(--ts-sm);
+  color: var(--text-secondary);
   margin-bottom: var(--sp-6);
   letter-spacing: 0.02em;
+  list-style: none;
+  padding: 0;
+  counter-reset: steps;
+}
+
+.getting-started li {
+  counter-increment: steps;
+  margin-bottom: var(--sp-2);
+}
+
+.getting-started li::before {
+  content: counter(steps) ". ";
+  color: var(--text-muted);
 }
 
 .getting-started kbd {
