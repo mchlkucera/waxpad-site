@@ -505,6 +505,19 @@ a:hover {
   text-align: center;
 }
 
+.screenshot {
+  text-align: center;
+  padding: var(--sp-6) 0 var(--sp-12);
+}
+
+.app-screenshot {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
 .origin-img {
   width: 280px;
   height: auto;
